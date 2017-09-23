@@ -39,6 +39,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <netinet/in.h>
 #include <sys/inotify.h>
 #include <errno.h>
+#include <pthread.h>
 
 #include "ipa_nat_logi.h"
 
@@ -316,6 +317,9 @@ struct ipa_nat_ip4_table_cache {
 #ifdef IPA_ON_R3PC
 	uint32_t mmap_offset;
 #endif
+
+	uint16_t cur_tbl_cnt;
+	uint16_t cur_expn_tbl_cnt;
 };
 
 struct ipa_nat_cache {
