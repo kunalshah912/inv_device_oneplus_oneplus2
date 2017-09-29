@@ -241,6 +241,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.midi.xml:system/etc/permissions/android.software.midi.xml
 
+# OnePlus Camera sanitization
+PRODUCT_COPY_FILES += \
+    device/oneplus/oneplus2/rootdir/etc/init.d/10opcamsanitize.sh:system/etc/init.d/10opcamsanitize
+
 # OMX
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \
